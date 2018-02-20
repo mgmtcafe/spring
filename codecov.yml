@@ -29,7 +29,10 @@ comment:
   layout: "reach, diff, flags, files, footer"
   behavior: default
   require_changes: no
-  
+
+codecov:
+  token: 454e440d-dc48-4e0e-951c-3346c6a74ab8  
+
 coverage:
   notify:
     slack:
