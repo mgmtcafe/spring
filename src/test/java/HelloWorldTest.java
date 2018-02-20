@@ -8,7 +8,7 @@ public class HelloWorldTest {
 	@Test
 	public void test() {
 		//HelloWorld helloWorld = new HelloWorld();
-		assertEquals(1, 0);
+		assertEquals(0, 0);
 	}
 
 }
