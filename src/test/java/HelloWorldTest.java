@@ -15,30 +15,26 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import com.springboot.HelloWorld;
 
-//@RunWith(SpringJUnit4ClassRunner.class)
+@RunWith(SpringJUnit4ClassRunner.class)
 public class HelloWorldTest {
-//	private MockMvc mockMvc;
-//	
-//    @InjectMocks
-//    private HelloWorld helloWorld;
-//    
-//    @Before
-//    public void setUp() throws Exception {
-//        mockMvc = MockMvcBuilders.standaloneSetup(helloWorld)
-//                .build();
-//    }
-//    
-//    @Test
-//    public void locByIdTest() throws Exception{
-//           mockMvc.perform(get("/")
-//                  .accept(MediaType.APPLICATION_JSON))
-//                  .andExpect(status().isOk())
-//                  .andExpect(jsonPath("$", Matchers.is("hello world!!!!")));
-//           
-//    }
-	@Test
-	public void HelloTest() {
-		assertEquals(0,1);
-	}
+	private MockMvc mockMvc;
+	
+    @InjectMocks
+    private HelloWorld helloWorld;
+    
+    @Before
+    public void setUp() throws Exception {
+        mockMvc = MockMvcBuilders.standaloneSetup(helloWorld)
+                .build();
+    }
+    
+    @Test
+    public void locByIdTest() throws Exception{
+           mockMvc.perform(get("/")
+                  .accept(MediaType.APPLICATION_JSON))
+                  .andExpect(status().isOk())
+                  .andExpect(jsonPath("$", Matchers.is("hello world!!")));
+           
+    }
 
 }
