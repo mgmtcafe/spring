@@ -32,7 +32,7 @@ public class HelloWorldTest {
            mockMvc.perform(get("/")
                   .accept(MediaType.APPLICATION_JSON))
                   .andExpect(status().isOk())
-                  .andExpect(jsonPath("$", Matchers.is("hello world!!")));
+                  .andExpect(jsonPath("$", Matchers.is("hello world!!!")));
            
     }
 
