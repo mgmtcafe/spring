@@ -8,9 +8,11 @@ notifications:
     on_success: never # default: change
     on_failure: always # default: always
 
-#after_success:
-#- mvn cobertura:cobertura
-script: "mvn cobertura:cobertura"
+script:
+ - mvn test
+ - mvn cobertura:cobertura
+
+#script: "mvn cobertura:cobertura"
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
